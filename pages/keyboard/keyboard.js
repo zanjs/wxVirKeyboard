@@ -80,11 +80,14 @@ Page({
     if (btnIndex == 0) {
       //说明是删除
       self.data.textArr.pop();
-      if (self.data.textArr.length < 1) {
+      if (self.data.textArr.length == 0) {
         //说明没有数据了，返回到省份选择键盘
         this.specialBtn = false;
         this.tapNum = false;
         this.keyboardValue = self.data.keyboard1;
+      } else if (self.data.textArr.length == 1){
+        //只能输入字母
+        this.tapNum = false;
       } else {
         this.specialBtn = true;
         this.tapNum = true;
