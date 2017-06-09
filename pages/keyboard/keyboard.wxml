@@ -1,0 +1,47 @@
+<!--keyboard.wxml-->
+<view class="title">查询停车费</view>
+
+<!--输入框-->
+<block>
+  <view class="text_con" bindtap="bindTextAreaFocus">
+    {{textValue}}
+    <view animation="{{animationData}}">|</view>
+  </view>
+</block>
+
+<!--键盘-->
+<block wx:if="{{isKeyboard}}">
+  <view class="keyboard">
+
+    <!--省份简写键盘-->
+    <view class="td td_nor" wx:for="{{keyboardValue}}" wx:for-index="idx" wx:for-item="itemName" bindtap="tapKeyboard" data-index="{{idx}}" data-val="{{itemName}}" hover-class="board_bg" hover-start-time="10" hover-stay-time="80">
+      {{itemName}}
+    </view>
+
+    <!--数字键盘不可点击-->
+    <view wx:if="{{specialBtn && !tapNum}}" class="td td_num board_bg" wx:for="{{keyboardNumber}}" wx:for-index="idx" wx:for-item="itemName">
+      {{itemName}}
+    </view>
+
+     <!--数字键盘可点击-->
+    <view wx:if="{{specialBtn && tapNum}}" class="td td_num" wx:for="{{keyboardNumber}}" wx:for-index="idx" wx:for-item="itemName" bindtap="tapKeyboard" data-index="{{idx}}" data-val="{{itemName}}" hover-class="board_bg" hover-start-time="10" hover-stay-time="80">
+      {{itemName}}
+    </view>
+
+    <!--字母键盘-->
+    <view wx:if="{{specialBtn}}" class="td td_num" wx:for="{{keyboardAlph}}" wx:for-index="idx" wx:for-item="itemName" bindtap="tapKeyboard" data-index="{{idx}}" data-val="{{itemName}}" hover-class="board_bg" hover-start-time="10" hover-stay-time="80">
+      {{itemName}}
+    </view>
+
+    <!--删除和完成按钮 start-->
+    <view class="td td_spec" wx:for="{{keyboard2For}}" wx:for-index="idx" wx:for-item="itemName" bindtap="tapSpecBtn" data-index="{{idx}}" data-val="{{itemName}}" wx:if="{{specialBtn}}" hover-class="board_bg" hover-start-time="10" hover-stay-time="80">
+      {{itemName}}
+    </view>
+    <!--删除和完成按钮 end-->
+  </view>
+</block>
+
+<view class="tel">
+  <text class="tel_name">客服电话：</text>
+  <view class="tel_number" bindtap="phoneCall">4000000</view>
+</view>

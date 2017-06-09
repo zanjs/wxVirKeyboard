@@ -1,0 +1,3 @@
+<button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover">
+  <text>{{text}}</text>
+</button>

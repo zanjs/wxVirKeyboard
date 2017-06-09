@@ -1,0 +1,74 @@
+/* keyboard.wxss */
+
+.title {
+  font-size: 60rpx;
+  margin-top: 100px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.text_con {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 1rpx solid #eee;
+  margin: 30rpx auto;
+  color: #000;
+}
+
+.keyboard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: #eaf1f9;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 10rpx solid #f1f1f1;
+  border-top: 10rpx solid #f1f1f1;
+}
+
+.td {
+  font-family: "微软雅黑";
+  flex-grow: 1;
+  text-align: center;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  margin: 0.4%;
+  border: 1rpx solid #cdd0d5;
+  color: #1e1e1e;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+}
+
+.td_nor {
+  flex: 1 1 10%;
+}
+
+.td_num {
+  flex: 1 1 8%;
+}
+
+.td_spec {
+  flex: 1 1 12%;
+}
+
+.board_bg {
+  background: #e5e5e5;
+}
+
+.tel {
+  text-align: center;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  bottom: 10rpx;
+}
