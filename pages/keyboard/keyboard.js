@@ -38,10 +38,17 @@ Page({
    */
   bindTextAreaFocus: function () {
     var self = this;
-    console.log('bindTextAreaFocus =' + self.data.keyboard1)
-    self.setData({
-      isKeyboard: true
-    })
+    if (self.data.isKeyboard){
+      //说明键盘是显示的，再次点击要隐藏键盘
+      self.setData({
+        isKeyboard: false
+      })
+    }else{
+      //说明键盘是隐藏的，再次点击显示键盘
+      self.setData({
+        isKeyboard: true
+      })
+    }
   },
   /**
    * 键盘事件
@@ -88,6 +95,8 @@ Page({
       } else if (self.data.textArr.length == 1){
         //只能输入字母
         this.tapNum = false;
+        this.specialBtn = true;
+        this.keyboardValue = self.data.keyboard2;
       } else {
         this.specialBtn = true;
         this.tapNum = true;

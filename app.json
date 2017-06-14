@@ -14,21 +14,21 @@
   },
   "tabBar": {
     "color": "#9c9c9c",
-    "selectedColor": "#1168a4",
+    "selectedColor": "#ff714a",
     "backgroundColor": "#ffffff",
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/keyboard/keyboard",
-        "iconPath": "images/icon_01.png",
-        "selectedIconPath": "images/icon_01_act.png",
-        "text": "首页"
+        "pagePath": "pages/logs/logs",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_act.png",
+        "text": "日志"
       },
       {
         "pagePath": "pages/mine/mine",
-        "iconPath": "images/icon_03.png",
-        "selectedIconPath": "images/icon_03_act.png",
-        "text": "停车位"
+        "iconPath": "images/icon_parking.png",
+        "selectedIconPath": "images/icon_parking_act.png",
+        "text": "我的信息"
       }
     ]
   },
